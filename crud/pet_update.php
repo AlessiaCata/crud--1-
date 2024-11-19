@@ -1,3 +1,12 @@
+<?php
+session_start(); // Iniciar la sesión
+
+if (!isset($_SESSION['nombre_usuario'])) {
+    header("Location: login/login.php");
+    exit();
+}
+?>
+
 <?php include("includes/db.php")?>
 <!DOCTYPE html>
 <html lang="en">

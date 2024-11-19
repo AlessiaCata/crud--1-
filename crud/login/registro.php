@@ -59,9 +59,8 @@
                 <div class="card">
                   <div class="card-body">
                     <!-- Formulario para enviar datos a user_save.php -->
-                    <form action="./crud/user_save.php" method="POST" enctype="multipart/form-data">
-                 <div class="row g-3 mb-3">
-                                
+                    <form action="InicioSesion/registrarse.php" method="POST" enctype="multipart/form-data">
+                        <div class="row g-3 mb-3">
                                 <!-- Nombre Completo Field -->
                                 <div class="col-12">
                                     <label for="nombre_completo" class="form-label">Nombre Completo</label>
@@ -84,6 +83,16 @@
                                     <input type="password" id="password" name="password" class="form-control" placeholder="Ingrese su contraseña" required>
                                 </div>
                             </div>
+                            <div class="field">
+                            <label for="role_id">Rol</label>
+                                 <select id="role_id" name="role_id" required>
+                                <option value="" disabled selected>Seleccione un rol</option>
+                                <?php foreach ($roles as $role): ?>
+                                    <option value="<?= $role['role_id']; ?>"><?= $role['cargo']; ?></option>
+                                <?php endforeach; ?>
+                             </select>
+                             </div>
+
                             <!-- Botón de envío -->
                             <button type="submit" class="btn btn-success" name="save" value="Crear Usuario">CREAR USUARIO</button>
                         </form>

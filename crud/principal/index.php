@@ -62,7 +62,7 @@ $contenido= parse_ini_file($filepath, true);
   <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 </nav>
 
-      <a class="btn-getstarted" href="login.php"> Ingresar </a>
+      <a class="btn-getstarted" href="../login/login.php"> Ingresar </a>
     </div>
   </header>
 

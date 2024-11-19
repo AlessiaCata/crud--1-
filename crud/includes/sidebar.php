@@ -97,7 +97,7 @@
 
                 <!-- Cerrar Sesión -->
                 <li class="nav-item">
-                    <a href="logout.php">
+                    <a href="login/logout.php">
                         <i class="fas fa-sign-out-alt"></i>
                         <p style="color: #333;">CERRAR SESIÓN</p>
                     </a>

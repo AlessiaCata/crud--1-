@@ -1,3 +1,12 @@
+<?php
+session_start(); // Iniciar la sesión
+
+if (!isset($_SESSION['nombre_usuario'])) {
+    header("Location: login/login.php");
+    exit();
+}
+?>
+
 <?php include("includes/db.php")?>
 <!DOCTYPE html>
 <html lang="en">
@@ -88,14 +97,14 @@
                                         }
 
                                         // Consulta para obtener los roles
-                                        $sql = "SELECT id, cargo FROM rol";
+                                        $sql = "SELECT role_id, cargo FROM rol";
                                         $result = $conn->query($sql);
 
                                         // Verificar que hay resultados
                                         if ($result->num_rows > 0) {
                                             // Generar las opciones dinámicas
                                             while ($row = $result->fetch_assoc()) {
-                                                echo "<option value='" . $row['id'] . "'>" . $row['cargo'] . "</option>";
+                                                echo "<option value='" . $row['role_id'] . "'>" . $row['cargo'] . "</option>";
                                             }
                                         } else {
                                             echo "<option value='' disabled>No hay roles disponibles</option>";
