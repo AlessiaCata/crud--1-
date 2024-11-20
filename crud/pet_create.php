@@ -136,6 +136,39 @@ if (!isset($_SESSION['nombre_usuario'])) {
                             <label for="genero" class="form-label">GENERO</label>
                             <input type="text" id="genero" name="Genero" class="form-control" placeholder="Ingrese el género de la mascota" required>
                         </div>
+                        <!-- ID Field -->
+                        <div class="col-12">
+    <label for="tamano" class="form-label">TAMAÑO</label>
+    <select id="tamano" name="tamano" class="form-select" required>
+        <option value="" disabled selected>Seleccione el tamaño</option>
+        <?php
+        // Conexión a la base de datos
+        $conn = new mysqli('localhost', 'root', '', 'mascota');
+
+        // Comprobar la conexión
+        if ($conn->connect_error) {
+            die("Conexión fallida: " . $conn->connect_error);
+        }
+
+        // Consulta para obtener los tamaños
+        $sql = "SELECT id, descripcion FROM tamano";
+        $result = $conn->query($sql);
+
+        // Llenar el menú desplegable con los tamaños
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                echo "<option value='" . $row['id'] . "'>" . $row['descripcion'] . "</option>";
+            }
+        } else {
+            echo "<option value='' disabled>No hay tamaños disponibles</option>";
+        }
+
+        // Cerrar la conexión
+        $conn->close();
+        ?>
+    </select>
+</div>
+
                          <!-- Foto Field -->
                          <div class="col-12">
                                     <label for="Foto" class="form-label">FOTO</label>

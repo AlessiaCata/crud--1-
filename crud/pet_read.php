@@ -75,6 +75,7 @@ if (!isset($_SESSION['nombre_usuario'])) {
             <th>Tipo</th>
             <th>Edad</th>
             <th>Genero</th>
+            <th>Tamaño</th>
             <th>Foto</th> <!-- Nueva columna para la foto -->
             <th>Acciones</th>
         </tr>
@@ -90,6 +91,12 @@ if (!isset($_SESSION['nombre_usuario'])) {
                 <td><?php echo $row['Tipo']; ?></td>
                 <td><?php echo $row['Edad']; ?></td>
                 <td><?php echo $row['Genero']; ?></td>
+                <td>
+                <?php 
+                echo isset($tamano[$row['descripcion']]) ? $tamano[$row['descripcion']] : 'No especificado';
+                ?>
+            </td>
+            <td>
                 <td>
                     <?php if ($row['Foto']): ?>
                         <img src="uploads/<?php echo $row['Foto']; ?>" alt="Foto de la mascota" width="100">
