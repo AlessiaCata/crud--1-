@@ -87,14 +87,6 @@
                     <h4 class="text-section" style="color: #333;">DATOS DE SESIÓN</h4>
                 </li>
 
-                <!-- Detalles -->
-                <li class="nav-item">
-                    <a href="details.php">
-                        <i class="fa fa-info"></i>
-                        <p style="color: #333;">DETALLES</p>
-                    </a>
-                </li>
-
                 <!-- Cerrar Sesión -->
                 <li class="nav-item">
                     <a href="login/logout.php">

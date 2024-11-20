@@ -104,12 +104,6 @@ if (!isset($_SESSION['nombre_usuario'])) {
           <div class="col-md-6 mb-3">
             <a href="consulta.php" class="btn btn-lg w-75 py-4" style="background-color: #8b4513; color: white;">CONSULTAS</a>
           </div>
-          <div class="col-md-6 mb-3">
-            <a href="consulta.php" class="btn btn-lg w-75 py-4" style="background-color: #cd853f; color: white;">ATENCION VETERINARIA</a>
-          </div>
-          <div class="col-md-6 mb-3">
-            <a href="consulta.php" class="btn btn-lg w-75 py-4" style="background-color: #a0522d; color: white;">SEGUIMIENTO</a>
-          </div>
         </div>
       </div>
     </div>

@@ -14,7 +14,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-image: url('./img/login_background.jpg');
+            background-image: url('./background/foton.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -79,10 +79,12 @@
         }
 
         .login-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -50px; /* Ajusta este valor para controlar cuánto quieres subir el formulario */
+}
+
     </style>
 </head>
 <body>

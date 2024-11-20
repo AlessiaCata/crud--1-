@@ -3,6 +3,7 @@ $filepath= 'ini.ini';
 $contenido= parse_ini_file($filepath, true);
 //var_dump($contenido);die(); 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,31 +44,29 @@ $contenido= parse_ini_file($filepath, true);
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-    <a href="index.php" class="logo d-flex align-items-center me-auto">
-      <img src="assets/img/<?php echo $contenido["Home"]["logo"]; ?>" alt="Logo">
-      <h1 class="sitename"><?php echo $contenido["Home"]["mastertitulo"]; ?></h1>
-    </a>
-
+      <a href="index.php" class="logo d-flex align-items-center me-auto">
+        <img src="assets/img/<?php echo $contenido ["Home"] ["logo"];?>" alt="">
+        <h1 class="sitename"><?php echo $contenido ["Home"] ["mastertitulo"];?></h1>
+      </a>
 
       <nav id="navmenu" class="navmenu">
   <ul>
-    <li><a href="index.php" >Inicio</a></li>
+   <li><a href="index.php">Inicio</a></li>
     <li><a href="nosotros.php">Nosotros</a></li>
     <li><a href="informacion.php">Información</a></li>
     <li><a href="servicios.php">Servicios</a></li>
-    <li><a href="donaciones.php">Donaciones</a></li>
+    <li><a href="donaciones.php" class="active">Donaciones</a></li>
     <li><a href="mascotas.php">Mascotas</a></li>
-    <li><a href="contacto.php" class="active">Contacto</a></li>
+    <li><a href="contacto.php">Contacto</a></li>
   </ul>
   <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 </nav>
 
-    <a class="btn-getstarted" href="../login/login.php"> Ingresar </a>
+      <a class="btn-getstarted" href="../login/login.php"> Ingresar </a>
     </div>
   </header>
 
   <main class="main">
-
     <!-- Hero Section -->
     <section id="hero" class="hero section">
       <div class="hero-bg">
@@ -76,7 +75,7 @@ $contenido= parse_ini_file($filepath, true);
       <div class="container text-center">
         <div class="d-flex flex-column justify-content-center align-items-center">
           <h1 data-aos="fade-up">
-          <?php echo $contenido ["contacto"] ["subtitulo"];?> <span>
+          <?php echo $contenido ["contacto"] ["subtitulo6"];?> <span>
           <?php echo $contenido ["Home"] ["mastertitulo"];?></span></h1>
           <p data-aos="fade-up" data-aos-delay="100"><?php echo $contenido ["Home"] ["subtitulo2"];?><br></p>
           <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
@@ -87,85 +86,77 @@ $contenido= parse_ini_file($filepath, true);
         </div>
       </div>
     </section><!-- /Hero Section -->
+       
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
+
+     <!-- Pricing Section -->
+    <section id="pricing" class="pricing section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2><?php echo $contenido ["Home"] ["titulo3"];?></h2>
-        <p><?php echo $contenido ["Home"] ["titulo4"];?></p>
+        <h2><?php echo $contenido ["Home"] ["text36"];?></h2>
+        <p><?php echo $contenido ["Home"] ["text37"];?></p>
       </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container">
 
         <div class="row gy-4">
 
-          <div class="col-lg-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
-              <i class="bi bi-geo-alt"></i>
-              <h3>Direccion</h3>
-              <p>Av Jose Ignacio De La Rosa, 1516, San Juan.</p>
-            </div>
-          </div><!-- End Info Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-telephone"></i>
-              <h3>Llamanos</h3>
-              <p>2644292300 / 2645011914</p>
-            </div>
-          </div><!-- End Info Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-envelope"></i>
-              <h3>Email</h3>
-              <p>AdoptaYa@gmail.com</p>
-            </div>
-          </div><!-- End Info Item -->
-
-        </div>
-
-        <div class="row gy-4 mt-1">
-          <!-- Mapa de Google Maps -->
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3356.0112160405336!2d-68.5874966!3d-31.5398003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x968140e2dc250afb%3A0x7fe8543041283dae!2sUniversidad%20Cat%C3%B3lica%20de%20Cuyo%20San%20Juan!5e0!3m2!1ses-419!2sar!4v1676961268712!5m2!1ses-419!2sar" frameborder="0" style="border:0; width: 100%; height: 400px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-         </div>
-
-          <div class="col-lg-6">
-            <form action="controladores/registro.php" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
-              <div class="row gy-4">
-              
-              <div class="col-md-6">
-                <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre Completo" required>
-              </div>
-
-              <div class="col-md-6">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Correo Electrónico" required>
-              </div>
-
-              <div class="col-md-12">
-                <input type="text" class="form-control" name="asunto" id="asunto" placeholder="Asunto (Adopción, Voluntariado, Donaciones)" required>
-              </div>
-
-              <div class="col-md-12">
-                <textarea class="form-control" name="mensaje" id="mensaje" rows="6" placeholder="Mensaje: Cuéntanos en qué estás interesado o qué necesitas saber sobre la adopción" required></textarea>
-              </div>
-            <div class="col-md-12 text-center">
-            <div class="loading">Cargando</div>
-            <div class="error-message" style="display: none; visibility: hidden;"></div>
-            <div class="sent-message">Tu mensaje ha sido enviado. ¡Gracias por contactarnos!</div>
-            <button type="submit" name="save">Enviar Mensaje</button>
-          </div>
-        </div>
-      </form>
-    </div><!-- End Contact Form -->
+        <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+  <div class="pricing-item">
+    <h3><?php echo $contenido ["Home"] ["text38"];?></h3>
+    <p class="description"><?php echo $contenido ["Home"] ["text39"];?></p>
+    <h4><sup>$</sup>10<span> / donación única</span></h4>
+    <a href=" https://mpago.la/2JCYaHk" class="cta-btn">Dona ahora</a>
+    <p class="text-center small">No se requiere tarjeta de crédito</p>
+    <ul>
+      <li><i class="bi bi-check"></i> <span>Alimentos para un mes</span></li>
+      <li><i class="bi bi-check"></i> <span>Refugio temporal para una mascota</span></li>
+    </ul>
   </div>
- </div>
-    </section><!-- /Contact Section -->
-  </main>
-     <footer id="footer" class="footer position-relative light-background">
+</div><!-- End Pricing Item -->
+
+<div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+  <div class="pricing-item featured">
+    <p class="popular">Más Popular</p>
+    <h3><?php echo $contenido ["Home"] ["text40"];?></h3>
+    <p class="description"><?php echo $contenido ["Home"] ["text41"];?></p>
+    <h4><sup>$</sup>25<span> / donación única</span></h4>
+    <a href="https://mpago.la/1LCou8X" class="cta-btn">Dona ahora</a>
+    <p class="text-center small">No se requiere tarjeta de crédito</p>
+    <ul>
+      <li><i class="bi bi-check"></i> <span>Vacunas para una mascota</span></li>
+      <li><i class="bi bi-check"></i> <span>Visita veterinaria general</span></li>
+      <li><i class="bi bi-check"></i> <span>Tratamiento de emergencia</span></li>
+    </ul>
+  </div>
+</div><!-- End Pricing Item -->
+
+<div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+  <div class="pricing-item">
+    <h3>Donación Avanzada</h3>
+    <p class="description">Apoya con una donación que cubra procedimientos médicos avanzados y esterilización.</p>
+    <h4><sup>$</sup>50<span> / donación única</span></h4>
+    <a href="https://mpago.la/2JFGYQ4" class="cta-btn">Dona ahora</a>
+    <p class="text-center small">No se requiere tarjeta de crédito</p>
+    <ul>
+      <li><i class="bi bi-check"></i> <span>Operación de esterilización</span></li>
+      <li><i class="bi bi-check"></i> <span>Tratamiento para mascotas enfermas</span></li>
+      <li><i class="bi bi-check"></i> <span>Cobertura de tratamientos de largo plazo</span></li>
+    </ul>
+  </div>
+</div><!-- End Pricing Item -->
+
+
+        </div>
+
+      </div>
+
+    </section><!-- /Pricing Section -->
+
+  
+
+        <footer id="footer" class="footer position-relative light-background">
         <div class="container footer-top">
           <div class="row gy-4">
             <!-- Acerca de nosotros -->

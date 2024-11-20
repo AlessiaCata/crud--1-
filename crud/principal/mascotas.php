@@ -43,25 +43,25 @@ $contenido= parse_ini_file($filepath, true);
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
+      <a href="index.php" class="logo d-flex align-items-center me-auto">
         <img src="assets/img/<?php echo $contenido ["Home"] ["logo"];?>" alt="">
         <h1 class="sitename"><?php echo $contenido ["Home"] ["mastertitulo"];?></h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
   <ul>
-    <li><a href="index.php" class="active">Inicio</a></li>
-    <li><a href="#about">Nosotros</a></li>
-    <li><a href="#features">Información</a></li>
-    <li><a href="#services">Servicios</a></li>
-    <li><a href="#pricing">Donaciones</a></li>
-    <li><a href="mascotas.php">Mascotas</a></li>
+    <li><a href="index.php">Inicio</a></li>
+    <li><a href="nosotros.php">Nosotros</a></li>
+    <li><a href="informacion.php">Información</a></li>
+    <li><a href="servicios.php">Servicios</a></li>
+    <li><a href="donaciones.php">Donaciones</a></li>
+    <li><a href="mascotas.php" class="active">Mascotas</a></li>
     <li><a href="contacto.php">Contacto</a></li>
   </ul>
   <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 </nav>
 
-      <a class="btn-getstarted" href="login.php"> Ingresar </a>
+    <a class="btn-getstarted" href="../login/login.php"> Ingresar </a>
     </div>
   </header>
 
@@ -79,7 +79,7 @@ $contenido= parse_ini_file($filepath, true);
           <?php echo $contenido ["Home"] ["mastertitulo"];?></span></h1>
           <p data-aos="fade-up" data-aos-delay="100"><?php echo $contenido ["Home"] ["subtitulo2"];?><br></p>
           <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-            <a href="#about" class="btn-get-started"><?php echo $contenido ["Home"] ["boton"];?></a>
+            <a href="contacto.php" class="btn-get-started"><?php echo $contenido ["Home"] ["boton"];?></a>
             <a href="<?php echo $contenido ["Home"] ["linkvideo"];?>" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span><?php echo $contenido ["Home"] ["video"];?></span></a>
           </div>
           <img src="assets/img/<?php echo $contenido ["Home"] ["foto_principal"];?>" class="img-fluid hero-img" alt="" data-aos="zoom-out" data-aos-delay="300">
